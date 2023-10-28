@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Form(props) {
+function Form() {
   const [firstName, setFirstName] = useState("John");
   const [lastName, setLastName] = useState("Henry");
   const [submittedData, setSubmittedData] = useState([])
@@ -19,8 +19,9 @@ function Form(props) {
 
     if (firstName.length > 0) {
       const formData = {
-        firstName: firstName
+        firstName: firstName,
         lastName: lastName
+        
       }
       const dataArray = [...submittedData,formData]
       setSubmittedData(dataArray)
